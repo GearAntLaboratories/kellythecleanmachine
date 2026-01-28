@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelly the Clean Machine - Professional Cleaning Services | Northern Twin Cities</title>
+    <meta name="description" content="Licensed and insured professional residential and commercial cleaning services in New Brighton and the Northern Twin Cities. Over 10 years of experience. Family-owned, pet-friendly. Text 651-249-1145 for a free quote.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Kelly the Clean Machine - Professional Cleaning Services">
+    <meta property="og:description" content="Licensed and insured professional cleaning services in the Northern Twin Cities. Over 10 years of experience. Family-owned and pet-friendly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kellythecleanmachine.com">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== CSS RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+html {
+            scroll-padding-top: 150px; /* Matches your header height */
+        }
+
+        :root {
+            /* Updated Color System - Black, Gold, Red, Silver */
+            --primary-gold: #E4C466;
+            --primary-gold-dark: #d4b456;
+            --primary-gold-light: #f0d896;
+            --accent-red: #C41E3A;
+            --accent-red-dark: #a01829;
+            --silver: #C0C0C0;
+            --dark-bg: #2b2b2b;
+            --darker-bg: #1a1a1a;
+            --light-bg: #f8f8f8;
+            --white: #ffffff;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --border-light: #e0e0e0;
+            
+            /* Typography */
+            --font-heading: 'Oswald', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+            
+            /* Spacing Scale */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
+            --space-3xl: 6rem;
+            
+            /* Transitions */
+            --transition-base: 0.3s ease;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white);
+        }
+
+        /* ===== SKIP LINK (Accessibility) ===== */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-gold);
+            color: var(--dark-bg);
+            padding: var(--space-sm) var(--space-md);
+            text-decoration: none;
+            font-weight: 600;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--space-md) var(--space-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--space-lg);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        /* LARGER LOGO - 100px desktop */
+        .logo img {
+            height: 100px !important;
+            width: auto !important;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--space-lg);
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-family: var(--font-heading);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            transition: color var(--transition-base);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-gold);
+            transition: width var(--transition-base);
+        }
+
+        /* Active state for scroll-based navigation */
+        .nav-links a.active {
+            color: var(--primary-gold-dark);
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--primary-gold-dark);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a:focus::after {
+            width: 100%;
+        }
+
+        /* Enhanced CTA button in nav */
+        .nav-cta {
+            background: var(--white);
+            border: 2px solid var(--primary-gold);
+            color: var(--text-dark);
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all var(--transition-base);
+        }
+
+        .nav-cta:hover,
+        .nav-cta:focus {
+            background: var(--primary-gold);
+            color: var(--dark-bg);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-cta::after {
+            display: none;
+        }
+
+        /* Mobile menu toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-dark);
+            padding: var(--space-xs);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(43, 43, 43, 0.75) 0%,
+                rgba(43, 43, 43, 0.5) 50%,
+                rgba(43, 43, 43, 0.75) 100%
+            );
+            z-index: 1;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: var(--white);
+            max-width: 900px;
+            padding: var(--space-lg);
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: var(--space-md);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 4px 8px rgba(0,0,0,0.4);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: var(--space-xl);
+            font-weight: 300;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* Enhanced Hero CTA */
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-gold);
+            color: var(--dark-bg);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1rem;
+            border-radius: 4px;
+            transition: all var(--transition-base);
+            box-shadow: var(--shadow-md);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover,
+        .cta-button:focus {
+            background: var(--primary-gold-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+
+        /* ===== TRUST BADGES ===== */
+        .trust-badges {
+            background: var(--primary-gold);
+            padding: var(--space-lg) var(--space-md);
+        }
+
+        .badges-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-xl);
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            color: var(--dark-bg);
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+
+        .badge::before {
+            content: '✓';
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services {
+            padding: var(--space-3xl) var(--space-lg);
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-2xl);
+        }
+
+        .section-header h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--space-sm);
+            color: var(--text-dark);
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: var(--space-xl);
+            text-align: center;
+            transition: all var(--transition-base);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .service-card:hover,
+        .service-card:focus-within {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-gold);
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: var(--space-md);
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+
+        .service-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: var(--space-md);
+            color: var(--text-dark);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .service-note {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-top: var(--space-md);
+            padding-top: var(--space-md);
+            border-top: 1px solid var(--border-light);
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            padding: var(--space-3xl) var(--space-lg);
+            background: var(--light-bg);
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: var(--space-2xl);
+            align-items: center;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+        }
+
+        .about-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            background: var(--primary-gold);
+            border-radius: 8px;
+            z-index: 0;
+        }
+
+        /* SQUARE IMAGE - Fixed aspect ratio */
+        .about-image {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            aspect-ratio: 1 / 1; /* Forces square */
+            object-fit: cover;
+            object-position: center;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-label {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--primary-gold-dark);
+            letter-spacing: 1px;
+            margin-bottom: var(--space-sm);
+            font-size: 0.9rem;
+        }
+
+        .about-content h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: var(--space-lg);
+            color: var(--text-dark);
+        }
+
+        .about-content > p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: var(--space-lg);
+            color: var(--text-light);
+        }
+
+        .about-subtitle {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: var(--space-md);
+            color: var(--text-dark);
+        }
+
+        .about-list {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+
+        .about-list li {
+            padding: var(--space-sm) 0;
+            padding-left: var(--space-lg);
+            position: relative;
+            line-height: 1.7;
+            color: var(--text-light);
+        }
+
+        .about-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-gold-dark);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .about-list strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .personal-touch {
+            background: var(--white);
+            padding: var(--space-lg);
+            border-radius: 8px;
+            margin-top: var(--space-lg);
+            border-left: 4px solid var(--primary-gold);
+        }
+
+        .personal-touch p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: var(--space-sm);
+        }
+
+        .personal-touch p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ===== HOURS SECTION ===== */
+        .hours-section {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: var(--space-2xl) var(--space-lg);
+        }
+
+        .hours-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hours-container h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: var(--space-xl);
+        }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .hours-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: var(--space-lg);
+            border-radius: 8px;
+            border: 1px solid rgba(228, 196, 102, 0.3);
+        }
+
+        .hours-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--primary-gold);
+            margin-bottom: var(--space-md);
+            text-transform: uppercase;
+        }
+
+        .hours-card p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+        }
+
+        .hours-card strong {
+            color: var(--white);
+            display: block;
+            margin-bottom: var(--space-xs);
+        }
+
+        /* ===== PRICING SECTION ===== */
+        .pricing {
+            padding: var(--space-3xl) var(--space-lg);
+            background: var(--light-bg);
+        }
+
+        .pricing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto var(--space-2xl);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            margin-top: var(--space-2xl);
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .pricing-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: var(--space-lg);
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--primary-gold);
+            padding-bottom: var(--space-md);
+        }
+
+        .pricing-card > p {
+            color: var(--text-light);
+            margin-bottom: var(--space-md);
+            line-height: 1.6;
+        }
+
+        .rate-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-md);
+            margin-bottom: var(--space-sm);
+            background: var(--light-bg);
+            border-radius: 4px;
+            border-left: 3px solid var(--primary-gold);
+        }
+
+        .rate-label {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .rate-price {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-gold-dark);
+            white-space: nowrap; /* Prevents breaking */
+        }
+
+        .pricing-note {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-top: var(--space-md);
+            line-height: 1.6;
+        }
+
+        .pricing-details {
+            background: var(--light-bg);
+            padding: var(--space-md);
+            border-radius: 4px;
+            margin-top: var(--space-md);
+        }
+
+        .pricing-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .pricing-details li {
+            padding: var(--space-xs) 0;
+            padding-left: var(--space-lg);
+            position: relative;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .pricing-details li::before {
+            content: '•';
+            position: absolute;
+            left: var(--space-sm);
+            color: var(--primary-gold-dark);
+            font-weight: 700;
+        }
+
+        .service-areas {
+            margin-top: var(--space-lg);
+        }
+
+        .service-areas h4 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+            color: var(--text-dark);
+        }
+
+        .service-areas p {
+            margin-bottom: var(--space-md);
+            color: var(--text-light);
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: var(--space-sm);
+        }
+
+        .area-tag {
+            background: var(--light-bg);
+            padding: var(--space-sm);
+            border-radius: 4px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            border: 1px solid var(--border-light);
+            transition: all var(--transition-base);
+        }
+
+        .area-tag:hover {
+            background: var(--primary-gold-light);
+            border-color: var(--primary-gold);
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq-section {
+            padding: var(--space-3xl) var(--space-lg);
+            background: var(--white);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--light-bg);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-md);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-gold);
+        }
+
+        .faq-item h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: var(--space-sm);
+        }
+
+        .faq-item p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: var(--space-3xl) var(--space-lg);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: var(--space-md);
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: var(--space-xl);
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-phone {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            margin-bottom: var(--space-xl);
+            display: block;
+            text-decoration: none;
+            transition: color var(--transition-base);
+        }
+
+        .cta-phone:hover,
+        .cta-phone:focus {
+            color: var(--primary-gold-light);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .cta-secondary:hover,
+        .cta-secondary:focus {
+            background: var(--white);
+            color: var(--dark-bg);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--darker-bg);
+            color: rgba(255, 255, 255, 0.8);
+            padding: var(--space-xl) var(--space-lg);
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-brand {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: var(--space-sm);
+            color: var(--white);
+        }
+
+        .footer-tagline {
+            margin-bottom: var(--space-sm);
+            font-size: 0.95rem;
+        }
+
+        .footer-address {
+            margin-bottom: var(--space-md);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-md);
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color var(--transition-base);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover,
+        .footer-links a:focus {
+            color: var(--primary-gold);
+        }
+
+        .footer-legal {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            padding-top: var(--space-md);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-legal a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+        }
+
+        .footer-legal a:hover {
+            color: var(--primary-gold);
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 968px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image-wrapper::before {
+                top: -15px;
+                left: -15px;
+                right: 15px;
+                bottom: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --space-xl: 2rem;
+                --space-2xl: 3rem;
+                --space-3xl: 4rem;
+            }
+
+          
+
+            /* REDUCED MOBILE HEADER PADDING */
+            nav {
+                padding: var(--space-sm) var(--space-lg);
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: var(--space-md);
+                box-shadow: var(--shadow-md);
+                gap: var(--space-md);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero {
+                height: 500px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .badges-container {
+                gap: var(--space-md);
+            }
+
+            .badge {
+                font-size: 0.8rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-lg);
+            }
+
+            .about-content h2 {
+                font-size: 2rem;
+            }
+
+            .cta-phone {
+                font-size: 2rem;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+
+            .areas-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+
+            .hours-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* FIX TRIP CHARGE BREAK ON MOBILE */
+            .rate-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--space-xs);
+            }
+
+            .rate-label {
+                font-size: 0.95rem;
+            }
+
+            .rate-price {
+                font-size: 1.2rem;
+                align-self: flex-end;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                height: 450px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 0.875rem 2rem;
+                font-size: 0.9rem;
+            }
+
+            .service-card {
+                padding: var(--space-lg);
+            }
+
+            .cta-phone {
+                font-size: 1.75rem;
+            }
+
+            .areas-grid {
+                grid-template-columns: 1fr;
+            }
+  /* LARGER LOGO on mobile - 80px */
+            .logo img {
+                height: 80px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header & Navigation -->
+    <header>
+        <nav role="navigation" aria-label="Main navigation">
+            <div class="logo">
+                <img src="kelly-logo.png" alt="Kelly the Clean Machine LLC logo" width="400" height="100">
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                ☰
+            </button>
+            <ul class="nav-links">
+                <li><a href="#services" data-section="services">Services</a></li>
+                <li><a href="#about" data-section="about">About</a></li>
+                <li><a href="#hours" data-section="hours">Hours</a></li>
+                <li><a href="#pricing" data-section="pricing">Pricing</a></li>
+                <li><a href="#faq" data-section="faq">FAQ</a></li>
+                <li><a href="#contact" class="nav-cta">Text Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <img src="hero-kitchen.png" alt="" class="hero-bg" width="1920" height="600" loading="eager">
+            <div class="hero-content">
+                <h1 id="hero-heading">Deep Cleaning.<br>Reliable Results.</h1>
+                <p>Professional residential and commercial cleaning for the Northern Twin Cities. Licensed, insured, and family-focused with over 10 years of experience.</p>
+                <a href="sms:651-249-1145" class="cta-button" aria-label="Text for a quote at 651-249-1145">Text for a Quote</a>
+            </div>
+        </section>
+
+        <!-- Trust Badges -->
+        <section class="trust-badges" aria-label="Trust badges">
+            <div class="badges-container">
+                <div class="badge">Licensed & Insured</div>
+                <div class="badge">10+ Years Experience</div>
+                <div class="badge">Locally Owned</div>
+                <div class="badge">Pet Friendly</div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="section-header">
+                <h2>My Services</h2>
+                <p>I don't just wipe surfaces—I deep clean them. My clients stay with me because I treat their homes with respect and efficiency. Each job is unique, so I tailor my approach to your specific needs.</p>
+            </div>
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🏠</div>
+                    <h3>Residential Deep Cleaning</h3>
+                    <p>Specializing in deep cleans that make your home manageable again. I focus on efficiency and detail for weekly or bi-weekly maintenance, creating a process that keeps your home consistently clean.</p>
+                    <p class="service-note">I prefer to clean when you're not home so I can dedicate 100% focus to the job.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🏢</div>
+                    <h3>Commercial Office Cleaning</h3>
+                    <p>Reliable cleaning for office buildings. Nights and weekends available to ensure zero disruption to your business operations. Rates determined after site visit based on square footage.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">🔨</div>
+                    <h3>High-End New Construction</h3>
+                    <p>Working directly with high-end builders to prepare new builds for their owners. Detailed cleaning from top to bottom using a combination of square footage and hourly rates.</p>
+                    <p class="service-note">Windows can be estimated separately upon request.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="about-container">
+                <div class="about-image-wrapper">
+                    <img src="kelly-photo.jpg" alt="Kelly Thill, owner of Kelly the Clean Machine" class="about-image" width="500" height="500" loading="lazy">
+                </div>
+                <div class="about-content">
+                    <div class="about-label">Meet the Owner</div>
+                    <h2>Kelly Thill</h2>
+                    <p>I have been in business for more than 10 years and have perfected processes to make my job as efficient as possible. I thrive on my work ethic and family values—I'm a dedicated wife of 23 years, mother of three boys, and a proud owner of two Mastiffs.</p>
+                    <h3 class="about-subtitle">Why clients trust me:</h3>
+                    <ul class="about-list">
+                        <li><strong>Respectful:</strong> I treat your home and belongings with care.</li>
+                        <li><strong>Trusted Keyholder:</strong> I prefer to clean when you aren't home so I can dedicate 100% focus to the job.</li>
+                        <li><strong>Pet Lover:</strong> As an owner of two Mastiffs, I love animals just as much or more than people. Your pets are safe with me!</li>
+                        <li><strong>Verified & Reliable:</strong> Background check and references available upon request.</li>
+                    </ul>
+                    <div class="personal-touch">
+                        <p>I work out regularly to stay healthy in body and mind. My favorite pastime includes weekends at the cabin with family, fishing, and anything on the lake.</p>
+                        <p>I work hard to provide a vacation every year for my family during the holidays to greet the ocean. I have strong roots in this area and am committed to serving my community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hours Section -->
+        <section id="hours" class="hours-section">
+            <div class="hours-container">
+                <h2>Hours of Operation</h2>
+                <div class="hours-grid">
+                    <div class="hours-card">
+                        <h3>Residential Cleaning</h3>
+                        <p><strong>Monday – Friday</strong></p>
+                        <p>9:00 AM – 3:00 PM</p>
+                        <p style="margin-top: var(--space-sm); font-size: 0.9rem; color: rgba(255,255,255,0.8);">This time is reserved for my residential clients to ensure dedicated, focused service.</p>
+                    </div>
+                    <div class="hours-card">
+                        <h3>Commercial & New Builds</h3>
+                        <p><strong>Nights & Weekends</strong></p>
+                        <p>By Appointment</p>
+                        <p style="margin-top: var(--space-sm); font-size: 0.9rem; color: rgba(255,255,255,0.8);">Dedicated to commercial offices and high-end new construction projects to avoid disrupting business operations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing">
+            <div class="section-header">
+                <h2>Pricing & Service Area</h2>
+                <p class="pricing-intro">My clients find that my fees are very fair and competitive. I work on a flat fee for repeat business as those homes have a history and I have an efficient process. My deep cleaning process allows your home to stay more manageable.</p>
+            </div>
+            <div class="pricing-container">
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Rates</h3>
+                        <p>Fair, transparent pricing based on efficiency and experience.</p>
+                        <div class="rate-item">
+                            <span class="rate-label">Minimum Charge</span>
+                            <span class="rate-price">$150.00</span>
+                        </div>
+                        <div class="rate-item">
+                            <span class="rate-label">Average Rate</span>
+                            <span class="rate-price">$50 / hour</span>
+                        </div>
+                        <div class="rate-item">
+                            <span class="rate-label">Trip Charge</span>
+                            <span class="rate-price">$50 (if outside area)</span>
+                        </div>
+                        <div class="pricing-details">
+                            <ul>
+                                <li>Rates include my experience, efficiencies, supplies, and insurance</li>
+                                <li>Additional charges may apply for pets, clients, or children at home</li>
+                                <li>Office building rates determined after site visit (square footage + time)</li>
+                                <li>New builds priced per project (square footage + hourly rate)</li>
+                                <li>Flat fee arrangements available for repeat residential clients</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Areas Served</h3>
+                        <p>Proudly serving the Northern Twin Cities from my New Brighton base:</p>
+                        <div class="service-areas">
+                            <h4>Primary Service Area</h4>
+                            <div class="areas-grid">
+                                <div class="area-tag">New Brighton</div>
+                                <div class="area-tag">North Oaks</div>
+                                <div class="area-tag">Arden Hills</div>
+                                <div class="area-tag">Shoreview</div>
+                                <div class="area-tag">Roseville</div>
+                                <div class="area-tag">Vadnais Heights</div>
+                                <div class="area-tag">Blaine</div>
+                                <div class="area-tag">Lino Lakes</div>
+                                <div class="area-tag">White Bear Lake</div>
+                            </div>
+                            <p class="pricing-note" style="margin-top: var(--space-md);">A trip charge may be required for anything outside of my basic service area. Text for a custom quote!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>Do I need to be home during cleaning?</h3>
+                    <p>I actually prefer that clients are not home so I can dedicate their entire time slot to a job well done. Many of my long-term clients trust me as a keyholder, which allows for the most efficient service.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you provide cleaning supplies?</h3>
+                    <p>Yes, supplies are typically provided by me unless something very specific is needed. I use your vacuum if available and sometimes bring my own vacuum as well for the best results.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Are you insured and licensed?</h3>
+                    <p>Yes, I am fully licensed and insured. I can also provide a background check and references upon request for your peace of mind.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What about pets?</h3>
+                    <p>I love pets! As an owner of two Mastiffs, I'm comfortable with all kinds of animals. I really enjoy visiting homes with pets and will treat them with the same care and respect as I do your home.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do you handle repeat business?</h3>
+                    <p>For repeat clients, I work on a flat fee basis. Once I've established a history with your home, I develop an efficient process tailored to your needs. My deep cleaning approach keeps your home more manageable between visits.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="cta-section">
+            <h2>Ready for a Cleaner Home?</h2>
+            <p>Text me your location and what type of cleaning you need.</p>
+            <a href="tel:651-249-1145" class="cta-phone" aria-label="Call Kelly at 651-249-1145">651-249-1145</a>
+            <div class="cta-buttons">
+                <a href="sms:651-249-1145" class="cta-button" aria-label="Text Kelly for a quote">Text Me</a>
+                <a href="mailto:Kellyjothill19@gmail.com" class="cta-button cta-secondary" aria-label="Email Kelly">Email Me</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">Kelly the Clean Machine LLC</div>
+            <p class="footer-tagline">Licensed | Insured | Twin Cities' Trusted Cleaner</p>
+            <p class="footer-address">542 11th Avenue NW, New Brighton, MN 55112</p>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#hours">Hours</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+                <a href="tel:651-249-1145">Contact</a>
+            </nav>
+            <div class="footer-legal">
+                <p>&copy; 2025 Kelly the Clean Machine LLC. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+// Active navigation based on scroll position
+const sections = document.querySelectorAll('section[id]');
+const navItems = document.querySelectorAll('.nav-links a[data-section]');
+
+// Mobile menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', !isExpanded);
+    navLinks.classList.toggle('active');
+});
+
+// Close mobile menu when clicking a link
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        
+        // Remove active class from all nav items when clicking
+        navItems.forEach(item => item.classList.remove('active'));
+    });
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+	this.blur();
+        const href = this.getAttribute('href');
+        if (href !== '#' && href !== '#main-content') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    });
+});
+
+function updateActiveNav() {
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - 150)) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('data-section') === current) {
+            item.classList.add('active');
+        }
+    });
+}
+
+// Update on scroll with throttling for performance
+let scrollTimeout;
+window.addEventListener('scroll', () => {
+    if (scrollTimeout) {
+        window.cancelAnimationFrame(scrollTimeout);
+    }
+    scrollTimeout = window.requestAnimationFrame(() => {
+        updateActiveNav();
+    });
+});
+
+// Update on page load
+updateActiveNav();
+    </script>
+</body>
+</html>
